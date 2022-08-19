@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.fms.AdminApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.093 s <<< FAILURE! - in com.fms.AdminApplicationTest
+com.fms.AdminApplicationTest  Time elapsed: 0.093 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/springframework/core/annotation/MergedAnnotations$SearchStrategy
+Caused by: java.lang.ClassNotFoundException: org.springframework.core.annotation.MergedAnnotations$SearchStrategy
+

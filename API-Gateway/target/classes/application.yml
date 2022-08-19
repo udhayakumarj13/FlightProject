@@ -1,0 +1,39 @@
+server:
+  port: 8980
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka
+  
+spring:
+  application:
+   name: API-Gateway
+   
+    
+  cloud:
+    gateway:
+      routes:
+      - id: FLIGHT-SERVICE
+        uri: http://localhost:9000
+        predicates:
+        - Path= /flight/**
+      - id: TICKET-SERVICE
+        uri: http://localhost:9700
+        predicates:
+        - Path= /Ticket/**
+      - id: ADMIN-SERVICE
+        uri: http://localhost:9191
+        predicates:
+        - Path=/admin/**
+      - id: USER-SERVICE
+        uri: http://localhost:8000
+        predicates:
+        - Path=/travellers/** 
+        
+ 
+             
+          
+      

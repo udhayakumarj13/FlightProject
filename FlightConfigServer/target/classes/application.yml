@@ -1,0 +1,46 @@
+server:
+  port: 8889
+  
+
+  
+  
+spring:
+  application:
+    name: CLOUD-CONFIG
+  profiles:
+    active:
+    - native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+          
+          
+          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8762/eureka
+  instance:
+    hostname: localhost
+      
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+#Enable all Spring Boot Actuator endpoints.
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
